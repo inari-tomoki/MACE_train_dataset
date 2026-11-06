@@ -15,6 +15,7 @@ from patches import apply_dftd3_cell_patch
 apply_dftd3_cell_patch()
 import json
 import importlib
+import torch
 ### CONSTANTS
 from configs.constants import E0_JSON, FOUNDATION_MODEL_PATH, MASTER_TRAIN, CLEAN_TRAIN, BAD_TRAIN, EXTERNAL_SYSTEM_TYPES
 from configs.round_configs.schema import ActivePipelineConfig
@@ -31,9 +32,15 @@ def load_residual_config(ROUND: int) -> tuple[CheckResidualConfig, callable, cal
         f"configs.round_configs.round{ROUND}_check_residual"
     )
     config = config_module.CONFIG
-    return config, config.get_residual_bounds, config.get_force_bounds
+    return config, config_module.get_residual_bounds, config_module.get_force_bounds
 
 CONFIG, get_residual_bounds, get_force_bounds = load_residual_config(ROUND)
+
+RUNTIME_DEVICE = CONFIG.device
+if RUNTIME_DEVICE == "cuda" and not torch.cuda.is_available():
+    print("[INFO] CUDA unavailable; residual check falling back to CPU.")
+    RUNTIME_DEVICE = "cpu"
+
 
 MAX_FORCE_REF = CONFIG.max_force_ref   # eV/Å
 MAX_RMSE      = CONFIG.max_rmse    # meV/Å
@@ -125,13 +132,13 @@ else:
 from mace.calculators import MACECalculator
 calc_mace = MACECalculator(
     model_paths=mace_path,
-    device=CONFIG.device,
+    device=RUNTIME_DEVICE,
     default_dtype=CONFIG.dtype
 )
 if CONFIG.apply_d3:
     print(f"[→] Including D3 in calculations (MACE + D3)")
     calc_DFT = TorchDFTD3Calculator(
-                    device=CONFIG.device,
+                    device=RUNTIME_DEVICE,
                     damping="bj",
                     xc=cfg.get("dispersion_xc", "pbe"),
                     cutoff=cfg.get("dispersion_cutoff", 40.0),

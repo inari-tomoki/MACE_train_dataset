@@ -2268,7 +2268,7 @@ def parse_all_cp2k_outputs(target_round=None, config = ActivePipelineConfig):
     print("="*60)
 
     try: 
-        with open("/home/inaritomoki/work/MACE_TRAIN/mace_active_learning/configs/E0s.json", "r") as file:
+        with open(Path(__file__).resolve().parent.parent / "configs" / "E0s.json", "r") as file:
             E0s_ref = {int(k): v for k, v in json.load(file).items()}
             print(f"Your E0s are {E0s_ref}")
     except FileNotFoundError:

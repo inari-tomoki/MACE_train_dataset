@@ -1,0 +1,56 @@
+{
+  "aced37bea2a7bbdb7372479de8d3bed2": {
+    "name": "sp_reico_random_r1_0011",
+    "cp2k_dir": "cp2k_sp_round1"
+  },
+  "3a03b4055429c02dac4c0fa2d995bef5": {
+    "name": "sp_reico_random_r1_0011",
+    "cp2k_dir": "cp2k_sp_round1"
+  },
+  "93d669d2da465045e64ab9fe6afa984e": {
+    "name": "sp_reico_random_r1_0011",
+    "cp2k_dir": "cp2k_sp_round1"
+  },
+  "29d990c025fcd5d7855026bc3e037a52": {
+    "name": "sp_reico_random_r1_0011",
+    "cp2k_dir": "cp2k_sp_round1"
+  },
+  "a112521cb4d7964b8fa4ac3e84cf9842": {
+    "name": "sp_FSI_r1_0005",
+    "cp2k_dir": "cp2k_sp_round1"
+  },
+  "52467690692772980c02c0833fa8aef2": {
+    "name": "sp_BF4_r1_0006",
+    "cp2k_dir": "cp2k_sp_round1"
+  },
+  "bd3e38247a89e3ec1de162b6175322f1": {
+    "name": "sp_BF4_r1_0007",
+    "cp2k_dir": "cp2k_sp_round1"
+  },
+  "ce6f1ffb198bbba46e88590141fe66b6": {
+    "name": "sp_reico_random_r1_0008",
+    "cp2k_dir": "cp2k_sp_round1"
+  },
+  "1a60994757304f7764ef682a041cc669": {
+    "name": "sp_reico_random_r1_0011",
+    "cp2k_dir": "cp2k_sp_round1"
+  },
+  "82d190dec6009cca691715bfe9798734": {
+    "name": "sp_reico_random_r1_0011",
+    "cp2k_dir": "cp2k_sp_round1"
+  },
+  "d146ce9fbeb5d4ee64c3c5b10f7a90e3": {
+    "name": "sp_reico_random_r1_0011",
+    "cp2k_dir": "cp2k_sp_round1"
+  },
+  "2382ad46ebc43f12c532f6df80d0d3f8": "sp_MPPyFSI_LiTFSI_68atoms_dense_r7_0000",
+  "6adfa3996d01bb2e5717d7a77104aae0": "sp_MPPyFSI_LiPF6_52atoms_Li_coord_r7_0001",
+  "bdbe81aac3765940b9261f75d2e43093": "sp_MPPyFSI_LiPF6_52atoms_r7_0002",
+  "ef0bd34fcb1b61376d5781ec0d0cb661": "sp_MPPyFSI_LiTFSI_68atoms_r7_0003",
+  "c805ef92d60ca501708849ef0a9e2512": "sp_MPPyFSI_LiBF4_48atoms_dense_r7_0004",
+  "1be756f56f6318fe392b69343f0e106b": "sp_MPPyFSI_LiBF4_48atoms_r7_0005",
+  "a135364dcdbe674298c1a1726afaafad": "sp_MPPyFSI_LiTFSI_68atoms_dense_r7_0006",
+  "bd065a6347134d2ab2ed16b3e00a6cfb": "sp_MPPyFSI_LiTFSI_68atoms_r7_0007",
+  "c8b77cb2cd7386eff11ccd4903f2e2d5": "sp_MPPyFSI_LiBF4_48atoms_r7_0008",
+  "88f94dc3af5efae76eb1c67722bf2bae": "sp_MPPyFSI_LiBF4_48atoms_dense_r7_0009"
+}

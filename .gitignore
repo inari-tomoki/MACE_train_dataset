@@ -41,6 +41,7 @@ al_selected_round*.xyz
 al_cp2k_results_round*.xyz
 training_data/
 geo_opt_results/
+*.xyz
 
 # ─── CP2K job directories ──────────────────────────────────
 cp2k_sp_round*/
@@ -70,3 +71,4 @@ config.local.sh
 settings.json
 launch.json
 dump_env.sh
+cp2k_e0_consistency_drafts/*
