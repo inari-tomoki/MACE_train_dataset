@@ -1,0 +1,5 @@
+Name,initial,final,charge,multiplicity,fragments
+MPPyFSI_LiTFSI_68atoms,work_litfsi/structures/MPPyFSI_LiTFSI_68atoms.xyz,,0,1,
+MPPyFSI_LiTFSI_68atoms_dense,work_litfsi/structures/MPPyFSI_LiTFSI_68atoms_dense.xyz,,0,1,
+MPPyFSI_LiBF4_48atoms,work_libf4/structures/MPPyFSI_LiBF4_48atoms.xyz,,0,1,
+MPPyFSI_LiBF4_48atoms_dense,work_libf4/structures/MPPyFSI_LiBF4_48atoms_dense.xyz,,0,1,

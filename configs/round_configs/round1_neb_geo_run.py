@@ -12,7 +12,7 @@ class NebGeoRunConfig:
     # --- Device / precision ---
     device: str = "cuda"        # "cuda" or "cpu"
     dtype: str = "float32"      # must match your model's dtype
-    nodes: int = 6              # see note on Singularity + multi-node below
+    nodes: int = 1              # see note on Singularity + multi-node below
 
     # --- Geometry optimisation ---
     fmax: float = 0.05                # eV/Å, force convergence threshold
@@ -26,7 +26,7 @@ class NebGeoRunConfig:
     fix_height_threshold: float = 2.7   # Å, fix atoms below this z-height
 
     # --- NEB ---
-    skip_neb: bool = False
+    skip_neb: bool = True
     n_images: int = 10
     neb_fmax: float = 0.05
     neb_optimizer: str = "FIRE"

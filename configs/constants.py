@@ -12,7 +12,7 @@ import os
 
 # --- CP2K basis/pseudopotential library location ---
 # Must be set via config.local.sh (sourced before running any pipeline script)
-LIBDIR = os.environ.get("CP2K_LIBDIR")
+LIBDIR ="/home/inaritomoki/anaconda3/envs/mace_env/share/cp2k/data/"
 if not LIBDIR:
     raise ValueError(
         "CP2K_LIBDIR environment variable is not set! "
@@ -20,14 +20,14 @@ if not LIBDIR:
     )
 
 # MACE MODEL PATHS
-FOUNDATION_MODEL_PATH="/home/user/Documents/Programs/For_GIT/MACE_CP2K_pipeline/mace-mp-0b3-medium-float32.model"
+FOUNDATION_MODEL_PATH="/home/inaritomoki/work/MACE_TRAIN/mace_active_learning/mace-mp-0b3-medium.model"
 FINETUNED_MODEL_PATH="/home/user/Documents/Programs/Python/ASE/MACE/active_learning/mace_V5_active_learning_stagetwo.model"
 
 # --- Atomic number mapping ---
-Z_MAP = {"H": 1, "Li": 3, "C": 6, "O": 8, "F": 9, "P": 15, "S": 16, "Pt": 78}
+Z_MAP = {"H": 1, "Li": 3,"B":5, "C": 6, "N": 7,"O": 8, "F": 9, "P": 15, "S": 16}
 
 # --- Elements treated as metals (affects e.g. slab-height triage logic) ---
-METALS = {"Pt", "Li"}  # extend if other transition metals are added later
+METALS = {}  # extend if other transition metals are added later
 
 # --- Fragments of molecules that have specific charges ---
 IONIC_SPECIES_CHARGE = {
@@ -35,7 +35,6 @@ IONIC_SPECIES_CHARGE = {
     "PYR13": +1,
     
 }
-
 # --- Location of training files ---
 CLEAN_TRAIN  = "training_clean.xyz"
 BAD_TRAIN    = "training_bad.xyz"
@@ -60,19 +59,13 @@ KIND_PARAMS = {
 # --- Default simulation cell (a, b, c) in Angstrom, keyed by substring
 # matched against the structure/system name ---
 DEFAULT_CELLS = {
-    "default":            (11.099, 9.612,  33.000),   # Pt slab systems
-    "naf_naf":            (22.198, 19.224, 29.790),    # Nafion + Pt slab
-    "pt_nafion":          (22.198, 19.224, 29.790),
-    "bulk_nafion":        (11.099, 9.612,  21.220),    # Bulk dissolved systems
-    "bulk_water_pt":      (11.099, 9.612,  21.220),
-    "dissolvedoh_nafion": (11.099, 9.612,  33.000),    # Dissolved oxide/hydroxide
-    "dissolvedo2_nafion": (11.099, 9.612,  33.000),
-    "dissolvedo_nafion":  (11.099, 9.612,  33.000),
+    "default":            (20.0, 20.0,  20.0)  
+
 }
 
 # --- E0 reference data file (isolated-atom energies, produced once per
 # round via the E0 calculation step, but the filename convention is stable) ---
-E0_JSON = "configs/E0s_ionicliquid.json"
+E0_JSON = "/home/inaritomoki/work/MACE_TRAIN/mace_active_learning/configs/E0s.json"
 E0_CELL_SIZE = 20.0  # Angstrom, cubic box for isolated-atom E0 calculations
 
 # --- External training-set filename tags that should never be pruned

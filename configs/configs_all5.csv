@@ -1,0 +1,7 @@
+Name,initial,final,charge,multiplicity,fragments
+TFSI,structures/TFSI_initial.cif,structures/TFSI_final.cif
+FSI,structures/FSI_initial.cif,structures/FSI_final.cif
+BF4,structures/BF4_initial.cif,structures/BF4_final.cif
+PYR13,structures/PYR13_initial.cif,structures/PYR13_final.cif
+PF6,structures/PF6_initial.cif,structures/PF6_final.xyz
+MPPyFSI_LiPF6_52atoms_Li_coord,work_pf6/structures/MPPyFSI_LiPF6_52atoms_Li_coord.xyz,,0,1,

@@ -1,0 +1,23 @@
+Round 8 DFT audit
+Parsed: 75; basic checks passed: 75.
+Production pool and training_clean.xyz were not modified.
+Basic checks are not a model validation or a decision to exclude high-uncertainty frames.
+Stress is not extracted in this staged dataset.
+
+MPPyFSI_LiBF4_48atoms: n=26, residual=3.3292..3.5697 eV/atom, max force=9.6379 eV/A
+MPPyFSI_LiPF6_52atoms: n=25, residual=-4.5117..-4.3495 eV/atom, max force=7.2037 eV/A
+MPPyFSI_LiTFSI_68atoms: n=24, residual=-4.4553..-4.2676 eV/atom, max force=28.1045 eV/A
+
+Largest forces:
+sp_MPPyFSI_LiTFSI_68atoms_r8_0051: Fmax=28.1045, atom=S30, min distance=0.9553, min covalent ratio=0.7231
+sp_MPPyFSI_LiBF4_48atoms_r8_0021: Fmax=9.6379, atom=S30, min distance=0.9989, min covalent ratio=0.8044
+sp_MPPyFSI_LiTFSI_68atoms_r8_0055: Fmax=9.6232, atom=S45, min distance=0.9983, min covalent ratio=0.7899
+sp_MPPyFSI_LiTFSI_68atoms_r8_0061: Fmax=9.5541, atom=S60, min distance=1.0554, min covalent ratio=0.7876
+sp_MPPyFSI_LiBF4_48atoms_r8_0000: Fmax=8.4874, atom=B37, min distance=0.9910, min covalent ratio=0.8272
+sp_MPPyFSI_LiBF4_48atoms_r8_0016: Fmax=8.4125, atom=S30, min distance=1.0238, min covalent ratio=0.7944
+sp_MPPyFSI_LiPF6_52atoms_r8_0038: Fmax=7.2037, atom=C4, min distance=0.9764, min covalent ratio=0.8462
+sp_MPPyFSI_LiTFSI_68atoms_r8_0069: Fmax=6.7021, atom=S38, min distance=1.0445, min covalent ratio=0.8096
+sp_MPPyFSI_LiBF4_48atoms_r8_0006: Fmax=6.0629, atom=C4, min distance=1.0135, min covalent ratio=0.8208
+sp_MPPyFSI_LiPF6_52atoms_r8_0032: Fmax=5.6605, atom=C4, min distance=0.9936, min covalent ratio=0.8291
+
+Duplicates in existing pool: 0
